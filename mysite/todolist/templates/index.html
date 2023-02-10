@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}HOME{% endblock %}
+
+{% block content %}
+
+
+<h2>Todolist!</h2>
+<br>
+{% if user.is_authenticated %}
+
+<h4>Jūs turite užduočių, kurias reikia padaryti: {{num_aktyvios}} </b></i></h4>
+{% else %}
+<h4>Užduočių kurias reikia atlikti nėra.</h4>
+{% endif %}
+{% endblock %}

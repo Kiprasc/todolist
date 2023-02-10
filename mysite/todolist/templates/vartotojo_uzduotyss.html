@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Mano užduotys{% endblock %}
+
+{% block content %}
+<h2>Mano užduotys:</h2>
+<br>
+{% if uzduotys %}
+{% for uzduotis in uzduotys %}
+
+    <a href="{% url 'uzduotis' uzduotis.pk %}">
+    <p>{{ uzduotis }}</p>
+    <hr>
+    </a>
+
+{% endfor %}
+{% else %}
+    <p>Užsakymų nerasta.</p>
+{% endif %}
+
+
+{% endblock %}
